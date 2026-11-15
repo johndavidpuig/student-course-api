@@ -45,19 +45,20 @@ The API will run locally on port 5000 by default.
 
 ## Deployment
 
-The Python Flask API is configured for deployment on Render using Gunicorn.
+The Python Flask API is deployed using Render as a Web Service.
 
-Build Command:
+**Python Flask API URL:**
 
-```bash
-pip install -r requirements.txt
-```
+https://student-course-api-python.onrender.com
 
-Start Command:
+**API Testing Links:**
 
-```bash
-gunicorn app:app
-```
+- Health Check: https://student-course-api-python.onrender.com/api/health
+- All Courses: https://student-course-api-python.onrender.com/api/courses
+- Specific Course: https://student-course-api-python.onrender.com/api/courses/1
+- Invalid Course: https://student-course-api-python.onrender.com/api/courses/9999
+
+The application uses Gunicorn as its production server and is connected to GitHub for automatic deployment.
 
 ## Project Limitations
 
