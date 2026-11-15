@@ -1,7 +1,7 @@
 services:
   - type: web
-    name: student-course-api
-    runtime: node
+    name: student-course-api-python
+    runtime: python
     plan: free
-    buildCommand: npm install
-    startCommand: npm start
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
